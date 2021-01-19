@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from smsru.models import Log
 from smsru.service import SmsRuApi
+from smsru.signals import smsru_call_back_sms
 
 
 @csrf_exempt
@@ -17,4 +18,5 @@ def sms_callback(request):
                 if item:
                     item.status_code = data_item[2]
                     item.save()
+                    smsru_call_back_sms.send(item.__class__, instance=item, new_status=item.status_code)
     return HttpResponse(100)
