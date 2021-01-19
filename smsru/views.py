@@ -8,11 +8,13 @@ from smsru.service import SmsRuApi
 @csrf_exempt
 def sms_callback(request):
     if request.method == 'POST':
-        data = request.POST.getlist('data[]')
+        data = [item[1][0].split('\n') for item in request.POST.lists() if 'data[' in item[0]]
         hash = request.POST.get('hash')
         api = SmsRuApi()
-        if api.validate_callback(data, hash):
-            item = Log.objects.filter(sms_id=data[1]).first()
-            item.status_code = data[2]
-            item.save()
+        if api.validate_callback(["\n".join(el) for el in data], hash):
+            for data_item in data:
+                item = Log.objects.filter(sms_id=data_item[1]).first()
+                if item:
+                    item.status_code = data_item[2]
+                    item.save()
     return HttpResponse(100)

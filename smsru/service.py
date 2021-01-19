@@ -130,5 +130,3 @@ class SmsRuApi:
                 post_param['multi'][phone_beautify] = msg
 
         return self._sms_request(post_param)
-
-
