@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.5 (2021-01-19)
+### Fix
+* Setup.cfg README.md ([`fb08a2b`](https://github.com/iredun/django-smsru/commit/fb08a2bfadd3287604c701d967e125b7a5d0691e))
+
 ## v0.2.4 (2021-01-19)
 ### Fix
 * Setup.cfg ([`0bc9d57`](https://github.com/iredun/django-smsru/commit/0bc9d579340ba0f14684b2e76ebe86c8c2635931))
