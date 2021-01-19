@@ -43,6 +43,6 @@ python manage.py send-sms-ru --phone +79888888888 --msg Тест
 ```python
 from smsru.service import SmsRuApi
 api = SmsRuApi()
-result = api.send_one_sms("+79888888888", "Test")
+result = api.send_one_sms("+79888888888", "Test") # телефон и сообщение
 # result: {'79888888888': True}
 ```
