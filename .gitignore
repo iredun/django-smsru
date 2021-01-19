@@ -114,5 +114,7 @@ media/
 *.db
 *.pid
 
+dist
+
 .env.dev
 .env.prod
