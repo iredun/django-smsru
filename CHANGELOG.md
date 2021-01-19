@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2021-01-19)
+### Fix
+* Убрал авто билд ([`bdd8fd8`](https://github.com/iredun/django-smsru/commit/bdd8fd862dc0ac42942f2be02a069214700a0097))
+
 ## v0.2.0 (2021-01-19)
 ### Feature
 * РЎС‚Р°СЂС‚РѕРІС‹Р№ РЅР°Р±РѕСЂ ([`96c124f`](https://github.com/iredun/django-smsru/commit/96c124f4377da825491cc14eefc63ce0efaa728c))
