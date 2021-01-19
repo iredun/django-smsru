@@ -57,6 +57,22 @@ SMS_RU = {
 python manage.py send-sms-ru --phone +79888888888 --msg Тест
 ```
 
+# Сигналы
+ - `smsru_call_back_sms(sender, instance, new_status)` - при обработке callback запроса, после изменения статуса сообщения
+
+```python
+from django.dispatch import receiver
+
+from smsru.signals import smsru_call_back_sms
+
+
+@receiver(smsru_call_back_sms)
+def call_back_sms(sender, instance, new_status, *args, **kwargs):
+    instance.msg = 'signal'
+    instance.save()
+
+```
+
 # Использование библиотеки в коде
 
 Отправка на один номер одного смс:
