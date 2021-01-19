@@ -1,9 +1,14 @@
 # Django SMS.RU
 
+[![PyPI version fury.io](https://badge.fury.io/py/django-smsru.svg)](https://pypi.org/project/django-smsru/)
+[![PyPI license](https://img.shields.io/pypi/l/django-smsru.svg)](https://pypi.python.org/pypi/django-smsru/)
+
 Приложение Django для быстрой интеграции API сервиса [sms.ru](https://sms.ru/?panel=api)
 
 Быстрый старт
 ---------------
+
+`pip install django-smsru`
 
 1. Добавьте `smsru` в INSTALLED_APPS:
 
