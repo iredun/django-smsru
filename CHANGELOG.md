@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2021-01-19)
+### Feature
+* Signals ([`184dca9`](https://github.com/iredun/django-smsru/commit/184dca9b641c1d47e85e7a9ad49cdde4f98144b6))
+
+### Fix
+* Sms_callback ([`dabf6f3`](https://github.com/iredun/django-smsru/commit/dabf6f3c498f41218e3120bf9116d19f20527a1f))
+
 ## v0.3.0 (2021-01-19)
 ### Feature
 * Отправка на несколько номеров ([`6bc3c69`](https://github.com/iredun/django-smsru/commit/6bc3c69bffbb63056fb884277793c894592c9142))
