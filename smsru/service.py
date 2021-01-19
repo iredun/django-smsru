@@ -10,7 +10,7 @@ class SmsRuApi:
     __api_id = None
     __login = None
     __password = None
-    __is_test = False
+    __is_test = 0
     __from = None
     __partner_id = None
     __api_url = 'https://sms.ru/sms/'
@@ -32,7 +32,7 @@ class SmsRuApi:
                 raise KeyError(f"LOGIN and PASSWORD not found in {setting_key}")
 
         self.__from = sms_ru.get('SENDER', None)
-        self.__is_test = sms_ru.get('TEST', False)
+        self.__is_test = int(sms_ru.get('TEST', False))
 
     @staticmethod
     def beautify_phone(phone: str) -> str:
@@ -67,6 +67,9 @@ class SmsRuApi:
         else:
             return_result = {k: False for k, v in post_param['multi'].items()}
             phone_msg = post_param['multi']
+            multi = post_param.pop('multi')
+            for k, v in multi.items():
+                post_param[f'multi[{k}]'] = v
 
         url = self.__api_url + 'send'
         data = self.__request(url, post_param)
@@ -117,10 +120,7 @@ class SmsRuApi:
         my_hash = self.__api_id + "".join(data)
         return hash == hashlib.sha256(my_hash.encode('utf-8')).hexdigest()
 
-    def __send_multi_sms(self, phone_sms: dict) -> dict:
-        """
-        Not tested func
-        """
+    def send_multi_sms(self, phone_sms: dict) -> dict:
         post_param = {
             "multi": dict()
         }
