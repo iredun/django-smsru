@@ -14,6 +14,7 @@ class SmsRuApi:
     __from = None
     __partner_id = None
     __api_url = 'https://sms.ru/sms/'
+    __api_url_my = 'https://sms.ru/my/'
 
     def __init__(self):
         self._get_settings()
@@ -130,3 +131,22 @@ class SmsRuApi:
                 post_param['multi'][phone_beautify] = msg
 
         return self._sms_request(post_param)
+
+    def get_balance(self) -> float:
+        url = self.__api_url_my + 'balance'
+        data = self.__request(url, {})
+        if data['status_code'] != 100:
+            raise Exception(data['status_text'])
+        
+        return data['balance']
+
+    def get_limit(self) -> dict:
+        url = self.__api_url_my + 'limit'
+        data = self.__request(url, {})
+        if data['status_code'] != 100:
+            raise Exception(data['status_text'])
+
+        return {
+            "total_limit": data['total_limit'],
+            "used_today": data['used_today']
+        }
