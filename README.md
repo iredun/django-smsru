@@ -97,3 +97,13 @@ result = api.send_multi_sms({
 })
 # result: {'79888888888': True, '79888888889': True}
 ```
+
+Получить баланс и лимиты:
+
+```python
+from smsru.service import SmsRuApi
+
+api = SmsRuApi()
+balance = api.get_balance()
+limits = api.get_limit()
+```
