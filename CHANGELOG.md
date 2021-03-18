@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2021-03-18)
+### Feature
+* Получение информации об аккаунте ([`7c9fc00`](https://github.com/iredun/django-smsru/commit/7c9fc00bb7c160d6d90bb50648ef002ee0706904))
+
+### Documentation
+* Правка кодировки в CHANGELOG.md ([`cc0656f`](https://github.com/iredun/django-smsru/commit/cc0656fa0560fce6406a4dbe923c01b441cea632))
+
 ## v0.4.0 (2021-01-19)
 ### Feature
 * Signals ([`184dca9`](https://github.com/iredun/django-smsru/commit/184dca9b641c1d47e85e7a9ad49cdde4f98144b6))
