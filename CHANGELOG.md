@@ -11,10 +11,10 @@
 
 ## v0.3.0 (2021-01-19)
 ### Feature
-* Отправка на несколько номеров ([`6bc3c69`](https://github.com/iredun/django-smsru/commit/6bc3c69bffbb63056fb884277793c894592c9142))
+* РћС‚РїСЂР°РІРєР° РЅР° РЅРµСЃРєРѕР»СЊРєРѕ РЅРѕРјРµСЂРѕРІ ([`6bc3c69`](https://github.com/iredun/django-smsru/commit/6bc3c69bffbb63056fb884277793c894592c9142))
 
 ### Fix
-* Актуализация перевода ([`ece1351`](https://github.com/iredun/django-smsru/commit/ece13518b1ac0a141d6fffcfda9229a704659d85))
+* РђРєС‚СѓР°Р»РёР·Р°С†РёСЏ РїРµСЂРµРІРѕРґР° ([`ece1351`](https://github.com/iredun/django-smsru/commit/ece13518b1ac0a141d6fffcfda9229a704659d85))
 
 ## v0.2.5 (2021-01-19)
 ### Fix
