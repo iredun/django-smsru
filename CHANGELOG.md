@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.0 (2021-03-25)
+### Fix
+* После отправки вернуть информацию по смс ([`1ac92f2`](https://github.com/iredun/django-smsru/commit/1ac92f29f57e7cff80a0b92f9e2323fefbd65aa5))
+
+### Breaking
+* поменялась структура данных возвращаемых после отправки смс  ([`1ac92f2`](https://github.com/iredun/django-smsru/commit/1ac92f29f57e7cff80a0b92f9e2323fefbd65aa5))
+
 ## v0.5.0 (2021-03-18)
 ### Feature
 * Получение информации об аккаунте ([`7c9fc00`](https://github.com/iredun/django-smsru/commit/7c9fc00bb7c160d6d90bb50648ef002ee0706904))
