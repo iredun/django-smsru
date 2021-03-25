@@ -62,11 +62,12 @@ class SmsRuApi:
         return data
 
     def _sms_request(self, post_param: dict) -> dict:
+        mock_sms = {'status': False, 'status_code': None, 'sms_id': None}
         if 'to' in post_param:
-            return_result = {k: False for k in post_param['to'].split(',')}
+            return_result = {k: mock_sms for k in post_param['to'].split(',')}
             phone_msg = {k: post_param['msg'] for k in post_param['to'].split(',')}
         else:
-            return_result = {k: False for k, v in post_param['multi'].items()}
+            return_result = {k: mock_sms for k, v in post_param['multi'].items()}
             phone_msg = post_param['multi']
             multi = post_param.pop('multi')
             for k, v in multi.items():
@@ -78,7 +79,11 @@ class SmsRuApi:
         if isinstance(data, dict):
             if data['status'] == 'OK' and data['status_code'] == 100:
                 for phone, result in data['sms'].items():
-                    return_result[phone] = result['status_code'] == 100
+                    return_result[phone] = {
+                        'status': result['status_code'] == 100,
+                        'status_code': result['status_code'],
+                        'sms_id': result['sms_id'],
+                    }
 
                     itm = Log(
                         phone=phone,
@@ -137,7 +142,7 @@ class SmsRuApi:
         data = self.__request(url, {})
         if data['status_code'] != 100:
             raise Exception(data['status_text'])
-        
+
         return data['balance']
 
     def get_limit(self) -> dict:

@@ -58,7 +58,9 @@ python manage.py send-sms-ru --phone +79888888888 --msg Тест
 ```
 
 # Сигналы
- - `smsru_call_back_sms(sender, instance, new_status)` - при обработке callback запроса, после изменения статуса сообщения
+
+- `smsru_call_back_sms(sender, instance, new_status)` - при обработке callback запроса, после изменения статуса
+  сообщения
 
 ```python
 from django.dispatch import receiver
@@ -82,7 +84,9 @@ from smsru.service import SmsRuApi
 
 api = SmsRuApi()
 result = api.send_one_sms("+79888888888", "Test")  # телефон и сообщение
-# result: {'79888888888': True}
+# result: {
+#   '79888888888': {'status': True, 'status_code': 100, 'sms_id': 0000-0000}
+# }
 ```
 
 Отправка на множество номеров, разных сообщений:
@@ -95,7 +99,10 @@ result = api.send_multi_sms({
     '+79888888888': 'test',
     '+79888888889': 'test 2',
 })
-# result: {'79888888888': True, '79888888889': True}
+# result: {
+#   '79888888888': {'status': True, 'status_code': 100, 'sms_id': 0000-0000}, 
+#   '79888888889': {'status': True, 'status_code': 100, 'sms_id': 0000-0000}
+# }
 ```
 
 Получить баланс и лимиты:
