@@ -85,7 +85,7 @@ from smsru.service import SmsRuApi
 api = SmsRuApi()
 result = api.send_one_sms("+79888888888", "Test")  # телефон и сообщение
 # result: {
-#   '79888888888': {'status': True, 'status_code': 100, 'sms_id': 0000-0000, 'status_text': ''}
+#   '79888888888': {'status': True, 'status_code': 100, 'sms_id': 0000-0000, 'status_text': 'Статус'}
 # }
 ```
 
@@ -100,8 +100,8 @@ result = api.send_multi_sms({
     '+79888888889': 'test 2',
 })
 # result: {
-#   '79888888888': {'status': True, 'status_code': 100, 'sms_id': 0000-0000, 'status_text': ''}, 
-#   '79888888889': {'status': True, 'status_code': 100, 'sms_id': 0000-0000, 'status_text': ''}
+#   '79888888888': {'status': True, 'status_code': 100, 'sms_id': 0000-0000, 'status_text': 'Статус'}, 
+#   '79888888889': {'status': True, 'status_code': 100, 'sms_id': 0000-0000, 'status_text': 'Статус'}
 # }
 ```
 
