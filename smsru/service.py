@@ -82,7 +82,8 @@ class SmsRuApi:
                     return_result[phone] = {
                         'status': result['status_code'] == 100,
                         'status_code': result['status_code'],
-                        'sms_id': result['sms_id'],
+                        'sms_id': result.get('sms_id', None),
+                        'status_text': result.get('status_text', None)
                     }
 
                     itm = Log(
