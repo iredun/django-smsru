@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.1 (2021-06-21)
+### Fix
+* ������ �������� ��� ([`3bab696`](https://github.com/iredun/django-smsru/commit/3bab696830406c5852fbf8bdcbd8cfc2aeadd4e3))
+
 ## v1.0.0 (2021-03-25)
 ### Fix
 * После отправки вернуть информацию по смс ([`1ac92f2`](https://github.com/iredun/django-smsru/commit/1ac92f29f57e7cff80a0b92f9e2323fefbd65aa5))
