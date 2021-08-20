@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.4 (2021-08-20)
+### Fix
+* Миграция пропущенная ([`3d54943`](https://github.com/iredun/django-smsru/commit/3d5494351ee6015ab87a230f8100e9030fcb879b))
+
 ## v1.0.3 (2021-06-21)
 
 
