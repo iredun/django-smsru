@@ -10,7 +10,7 @@
 
 ## v1.0.1 (2021-06-21)
 ### Fix
-* Ошибки отправки смс ([`3bab696`](https://github.com/iredun/django-smsru/commit/3bab696830406c5852fbf8bdcbd8cfc2aeadd4e3))
+* РћС€РёР±РєРё РѕС‚РїСЂР°РІРєРё СЃРјСЃ ([`3bab696`](https://github.com/iredun/django-smsru/commit/3bab696830406c5852fbf8bdcbd8cfc2aeadd4e3))
 
 ## v1.0.0 (2021-03-25)
 ### Fix
